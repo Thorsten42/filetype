@@ -3,7 +3,8 @@ package filetype
 import (
 	"io"
 	"os"
-
+  "fmt"
+  
 	"github.com/h2non/filetype/matchers"
 	"github.com/h2non/filetype/types"
 )
@@ -37,6 +38,7 @@ func Match(buf []byte) (types.Type, error) {
 
 // Get is an alias to Match()
 func Get(buf []byte) (types.Type, error) {
+  fmt.Println("debug filetype package!")
 	return Match(buf)
 }
 
